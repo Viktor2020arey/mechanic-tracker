@@ -14,3 +14,9 @@ app.use("/api/auth", authRoutes);
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
 });
+
+const carRoutes = require("./routes/carRoutes");
+const sessionRoutes = require("./routes/sessionRoutes");
+
+app.use("/api/cars", carRoutes);
+app.use("/api/sessions", sessionRoutes);
